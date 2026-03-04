@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import argparse
 import os
-import sys
+import sys 
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 if PROJECT_ROOT not in sys.path:

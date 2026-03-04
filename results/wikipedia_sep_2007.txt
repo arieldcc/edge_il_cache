@@ -3,7 +3,7 @@ cache_size=12221, hit_ratio=0.6254 (5003026/8000000)
 cache_size=15277, hit_ratio=0.6336 (5068422/8000000)
 cache_size=30554, hit_ratio=0.6586 (5268759/8000000)
 cache_size=45831, hit_ratio=0.6834 (5467339/8000000)
-cache_size=61109, hit_ratio=0.7000 (5599654/8000000)
+cache_size=61109, hit_ratio=0.7000 (5599654/8000000) 
 cache_size=76386, hit_ratio=0.7112 (5689687/8000000)
 
 === Summary 001_ilnse_A2_guard_full_NB===
