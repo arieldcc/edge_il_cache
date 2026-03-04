@@ -1,0 +1,10 @@
+{
+  "dataset": "wikipedia_september_2007",
+  "policy": "LRU",
+  "cache_size_objects": 45831,
+  "total_requests_config": 9000000,
+  "warmup_requests_config": 1000000,
+  "cache_hits": 5174749,
+  "cache_requests": 8000000,
+  "hit_ratio": 0.646843625
+}

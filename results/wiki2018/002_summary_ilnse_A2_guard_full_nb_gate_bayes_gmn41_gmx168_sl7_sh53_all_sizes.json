@@ -1,0 +1,56 @@
+{
+  "dataset": "wiki2018",
+  "model": "ilnse_A2_guard_full_nb_gate_bayes_gmn41_gmx168_sl7_sh53",
+  "feature_set": "A2",
+  "base_learner": "nb",
+  "drift_control_mode": "scaled",
+  "drift_norm_power": 1.0,
+  "drift_threshold": 0.6,
+  "drift_alpha_low": 0.04,
+  "drift_alpha_high": 0.18,
+  "drift_use_capacity_scale": true,
+  "drift_gain": 1.5,
+  "drift_guard_precision_min": 0.06,
+  "drift_guard_spread_min": 0.01,
+  "score_gate_use_adaptive": true,
+  "score_gate_min_percent": 0.04140034992152931,
+  "score_gate_max_percent": 0.16813644764495345,
+  "score_gate_spread_low": 0.006999341366018209,
+  "score_gate_spread_high": 0.0529876141713245,
+  "num_features": 10,
+  "cache_sizes": [
+    16123,
+    20154,
+    40308,
+    60463,
+    80617,
+    100772
+  ],
+  "hr_curve": [
+    {
+      "cache_size_objects": 16123,
+      "hit_ratio": 0.4683422222222222
+    },
+    {
+      "cache_size_objects": 20154,
+      "hit_ratio": 0.48337144444444446
+    },
+    {
+      "cache_size_objects": 40308,
+      "hit_ratio": 0.5276517777777778
+    },
+    {
+      "cache_size_objects": 60463,
+      "hit_ratio": 0.5603485555555555
+    },
+    {
+      "cache_size_objects": 80617,
+      "hit_ratio": 0.5853573333333333
+    },
+    {
+      "cache_size_objects": 100772,
+      "hit_ratio": 0.6052756666666667
+    }
+  ],
+  "avg_hr": 0.5383911666666666
+}

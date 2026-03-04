@@ -1,0 +1,42 @@
+{
+  "dataset": "wikipedia_september_2007",
+  "model": "ilnse_A1_drift_page_hinkley",
+  "feature_set": "A1",
+  "drift_method": "page_hinkley",
+  "num_features": 7,
+  "cache_sizes": [
+    12221,
+    15277,
+    30554,
+    45831,
+    61109,
+    76386
+  ],
+  "hr_curve": [
+    {
+      "cache_size_objects": 12221,
+      "hit_ratio": 0.6291965
+    },
+    {
+      "cache_size_objects": 15277,
+      "hit_ratio": 0.637052875
+    },
+    {
+      "cache_size_objects": 30554,
+      "hit_ratio": 0.66825775
+    },
+    {
+      "cache_size_objects": 45831,
+      "hit_ratio": 0.6800705
+    },
+    {
+      "cache_size_objects": 61109,
+      "hit_ratio": 0.68774875
+    },
+    {
+      "cache_size_objects": 76386,
+      "hit_ratio": 0.693159375
+    }
+  ],
+  "avg_hr": 0.6659142916666666
+}

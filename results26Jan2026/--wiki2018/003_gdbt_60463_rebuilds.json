@@ -1,0 +1,170 @@
+{
+  "dataset": "wiki2018",
+  "model": "gdbt",
+  "cache_size_objects": 60463,
+  "rebuilds": [
+    {
+      "rebuild_number": 1,
+      "buffer_size": 592111,
+      "success": true,
+      "num_samples": 592111,
+      "num_label_1": 118418,
+      "num_label_0": 473693,
+      "train_accuracy": 0.9118340986740662,
+      "n_estimators_actual": 30,
+      "phase": "warmup_complete",
+      "global_request_idx": 999999
+    },
+    {
+      "rebuild_number": 2,
+      "buffer_size": 596747,
+      "success": true,
+      "num_samples": 596747,
+      "num_label_1": 119344,
+      "num_label_0": 477403,
+      "train_accuracy": 0.9078788833458735,
+      "n_estimators_actual": 30,
+      "phase": "eval_rebuild",
+      "global_request_idx": 1999999,
+      "cache_hit_ratio_so_far": 0.461441
+    },
+    {
+      "rebuild_number": 3,
+      "buffer_size": 592449,
+      "success": true,
+      "num_samples": 592449,
+      "num_label_1": 118485,
+      "num_label_0": 473964,
+      "train_accuracy": 0.9098251495065398,
+      "n_estimators_actual": 30,
+      "phase": "eval_rebuild",
+      "global_request_idx": 2999999,
+      "cache_hit_ratio_so_far": 0.4972925
+    },
+    {
+      "rebuild_number": 4,
+      "buffer_size": 591606,
+      "success": true,
+      "num_samples": 591606,
+      "num_label_1": 118317,
+      "num_label_0": 473289,
+      "train_accuracy": 0.909287600193372,
+      "n_estimators_actual": 30,
+      "phase": "eval_rebuild",
+      "global_request_idx": 3999999,
+      "cache_hit_ratio_so_far": 0.517884
+    },
+    {
+      "rebuild_number": 5,
+      "buffer_size": 596179,
+      "success": true,
+      "num_samples": 596179,
+      "num_label_1": 119233,
+      "num_label_0": 476946,
+      "train_accuracy": 0.9080544601537458,
+      "n_estimators_actual": 30,
+      "phase": "eval_rebuild",
+      "global_request_idx": 4999999,
+      "cache_hit_ratio_so_far": 0.528445
+    },
+    {
+      "rebuild_number": 6,
+      "buffer_size": 593498,
+      "success": true,
+      "num_samples": 593498,
+      "num_label_1": 118695,
+      "num_label_0": 474803,
+      "train_accuracy": 0.9087309477032779,
+      "n_estimators_actual": 30,
+      "phase": "eval_rebuild",
+      "global_request_idx": 5999999,
+      "cache_hit_ratio_so_far": 0.5356384
+    },
+    {
+      "rebuild_number": 7,
+      "buffer_size": 591289,
+      "success": true,
+      "num_samples": 591289,
+      "num_label_1": 118255,
+      "num_label_0": 473034,
+      "train_accuracy": 0.9093522795113727,
+      "n_estimators_actual": 30,
+      "phase": "eval_rebuild",
+      "global_request_idx": 6999999,
+      "cache_hit_ratio_so_far": 0.5412926666666666
+    },
+    {
+      "rebuild_number": 8,
+      "buffer_size": 594428,
+      "success": true,
+      "num_samples": 594428,
+      "num_label_1": 118882,
+      "num_label_0": 475546,
+      "train_accuracy": 0.9092085164225103,
+      "n_estimators_actual": 30,
+      "phase": "eval_rebuild",
+      "global_request_idx": 7999999,
+      "cache_hit_ratio_so_far": 0.5445072857142857
+    },
+    {
+      "rebuild_number": 9,
+      "buffer_size": 589274,
+      "success": true,
+      "num_samples": 589274,
+      "num_label_1": 117851,
+      "num_label_0": 471423,
+      "train_accuracy": 0.9098517837203067,
+      "n_estimators_actual": 30,
+      "phase": "eval_rebuild",
+      "global_request_idx": 8999999,
+      "cache_hit_ratio_so_far": 0.54752825
+    },
+    {
+      "rebuild_number": 10,
+      "buffer_size": 562003,
+      "success": true,
+      "num_samples": 562003,
+      "num_label_1": 112397,
+      "num_label_0": 449606,
+      "train_accuracy": 0.9126268009245502,
+      "n_estimators_actual": 30,
+      "phase": "eval_rebuild",
+      "global_request_idx": 9999999,
+      "cache_hit_ratio_so_far": 0.552131
+    },
+    {
+      "final_model_stats": {
+        "num_rebuilds": 10,
+        "total_training_samples": 5899584,
+        "current_buffer_size": 0,
+        "has_model": true,
+        "last_rebuild_info": {
+          "rebuild_number": 10,
+          "buffer_size": 562003,
+          "success": true,
+          "num_samples": 562003,
+          "num_label_1": 112397,
+          "num_label_0": 449606,
+          "train_accuracy": 0.9126268009245502,
+          "n_estimators_actual": 30,
+          "phase": "eval_rebuild",
+          "global_request_idx": 9999999,
+          "cache_hit_ratio_so_far": 0.552131
+        },
+        "n_features": 6,
+        "pop_top_percent": 0.2,
+        "update_interval_requests": 1000000,
+        "n_estimators": 30,
+        "n_estimators_actual": 30
+      },
+      "feature_importances": [
+        338,
+        75,
+        93,
+        112,
+        97,
+        185
+      ]
+    }
+  ]
+}

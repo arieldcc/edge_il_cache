@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+
+# Conda / env
+.conda/
+.env
+.venv/
+
+# Datasets (do not upload)
+data/raw/
+data/row/
+
+# Root-level text notes (do not upload)
+/*.txt

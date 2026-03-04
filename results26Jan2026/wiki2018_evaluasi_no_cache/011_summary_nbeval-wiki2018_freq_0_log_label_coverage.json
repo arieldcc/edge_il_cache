@@ -1,0 +1,88 @@
+{
+  "trace_path": "data/raw/wiki2018/wiki2018.gz",
+  "total_requests": 10000000,
+  "warmup_requests": 1000000,
+  "slot_size": 100000,
+  "num_gaps": 6,
+  "pop_top_percent": 0.2,
+  "label_mode": "coverage",
+  "use_freq_feature": false,
+  "freq_feature_mode": "log",
+  "freq_feature_source": "prev_slot",
+  "max_classifiers": 20,
+  "warmup_slots": 10,
+  "slots_eval": 90,
+  "mean": {
+    "xu": {
+      "ap": 0.34879058547253106,
+      "auc": 0.5664482732362927,
+      "precK": 0.3567370365615412
+    },
+    "ma": {
+      "ap": 0.5627723890825139,
+      "auc": 0.6571103670317371,
+      "precK": 0.49690398137670416
+    },
+    "hist_len<=1": {
+      "xu_ap": 0.22531270831689496,
+      "ma_ap": 0.2587194078659814,
+      "xu_precK": 0.23781840720664332,
+      "ma_precK": 0.24784599321259398
+    }
+  },
+  "warmup_mean": {
+    "slots_eval": 10,
+    "xu": {
+      "ap": 0.6112081326089436,
+      "auc": 0.6597556566266107,
+      "precK": 0.6148198803681324
+    },
+    "ma": {
+      "ap": 0.6698575669180677,
+      "auc": 0.6705502366344758,
+      "precK": 0.5826201377955994
+    },
+    "hist_len<=1": {
+      "xu_ap": 0.4437912336823728,
+      "ma_ap": 0.4268865683993665,
+      "xu_precK": 0.5261666235329729,
+      "ma_precK": 0.38987662924942423
+    }
+  },
+  "post_admit": {
+    "horizon_slots": 1,
+    "admit_k": -1.0,
+    "scope": "all",
+    "slots_complete": 89,
+    "slots_incomplete": 1,
+    "mean": {
+      "xu": {
+        "hit_share": 0.033268988764044945,
+        "unique_hit_rate": 0.17684825265987747,
+        "hits_per_admit": 0.27843077921444803,
+        "admit_k": 11801.08988764045
+      },
+      "ma": {
+        "hit_share": 0.4127504494382022,
+        "unique_hit_rate": 0.5242348158022518,
+        "hits_per_admit": 3.495996197237594,
+        "admit_k": 11801.08988764045
+      }
+    },
+    "warmup_mean": {
+      "slots_eval": 10,
+      "xu": {
+        "hit_share": 0.395446,
+        "unique_hit_rate": 0.5287743213547549,
+        "hits_per_admit": 3.3300232149608595,
+        "admit_k": 11842.7
+      },
+      "ma": {
+        "hit_share": 0.393366,
+        "unique_hit_rate": 0.46522200498481786,
+        "hits_per_admit": 3.3170822801033024,
+        "admit_k": 11842.7
+      }
+    }
+  }
+}

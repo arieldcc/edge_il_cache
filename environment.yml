@@ -1,0 +1,20 @@
+name: edge_il_cache
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10.19
+  - numpy
+  - pandas
+  - pyarrow
+  - fastparquet
+  - tqdm
+  - psutil
+  - pyyaml
+  - rich
+  - scikit-learn
+  - matplotlib
+  - pip
+  - pip:
+      - ujson
+      - orjson
+      - pytest

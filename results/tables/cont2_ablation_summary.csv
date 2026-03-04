@@ -1,0 +1,7 @@
+dataset,variant,avg_delta_hr,win,tie,lose
+wikipedia_september_2007,No-Guard,0.006488958333333332,6,0,0
+wikipedia_september_2007,Precision-only,0.003940583333333358,6,0,0
+wikipedia_september_2007,Quality-only,0.005186854166666681,6,0,0
+wiki2018,No-Guard,0.010203240740740721,6,0,0
+wiki2018,Precision-only,0.006134925925925905,6,0,0
+wiki2018,Quality-only,0.009957611111111089,6,0,0

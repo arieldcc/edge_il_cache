@@ -1,0 +1,17 @@
+{
+  "dataset": "wiki2018",
+  "model": "ilnse_A2_guard_no_guard_nb_overhead",
+  "feature_set": "A2",
+  "base_learner": "nb",
+  "num_features": 10,
+  "cache_sizes": [
+    16123
+  ],
+  "hr_curve": [
+    {
+      "cache_size_objects": 16123,
+      "hit_ratio": 0.4594252222222222
+    }
+  ],
+  "avg_hr": 0.4594252222222222
+}

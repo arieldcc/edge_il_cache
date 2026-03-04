@@ -1,0 +1,42 @@
+{
+  "dataset": "wiki2018",
+  "model": "ilnse_A1_drift_jsd",
+  "feature_set": "A1",
+  "drift_method": "jsd",
+  "num_features": 7,
+  "cache_sizes": [
+    16123,
+    20154,
+    40308,
+    60463,
+    80617,
+    100772
+  ],
+  "hr_curve": [
+    {
+      "cache_size_objects": 16123,
+      "hit_ratio": 0.4565368888888889
+    },
+    {
+      "cache_size_objects": 20154,
+      "hit_ratio": 0.47109355555555554
+    },
+    {
+      "cache_size_objects": 40308,
+      "hit_ratio": 0.5245734444444444
+    },
+    {
+      "cache_size_objects": 60463,
+      "hit_ratio": 0.5505207777777777
+    },
+    {
+      "cache_size_objects": 80617,
+      "hit_ratio": 0.5668876666666667
+    },
+    {
+      "cache_size_objects": 100772,
+      "hit_ratio": 0.5794278888888889
+    }
+  ],
+  "avg_hr": 0.5248400370370371
+}

@@ -1,0 +1,41 @@
+{
+  "dataset": "wikipedia_september_2007",
+  "model": "ilnse_A2_guard_qsweep_q0.9_ema0.1_min0.7_max1.3_boost0.1_gate0.05",
+  "feature_set": "A2",
+  "num_features": 10,
+  "cache_sizes": [
+    12221,
+    15277,
+    30554,
+    45831,
+    61109,
+    76386
+  ],
+  "hr_curve": [
+    {
+      "cache_size_objects": 12221,
+      "hit_ratio": 0.636714875
+    },
+    {
+      "cache_size_objects": 15277,
+      "hit_ratio": 0.644514375
+    },
+    {
+      "cache_size_objects": 30554,
+      "hit_ratio": 0.66969825
+    },
+    {
+      "cache_size_objects": 45831,
+      "hit_ratio": 0.689205625
+    },
+    {
+      "cache_size_objects": 61109,
+      "hit_ratio": 0.703852
+    },
+    {
+      "cache_size_objects": 76386,
+      "hit_ratio": 0.714604625
+    }
+  ],
+  "avg_hr": 0.6764316250000001
+}

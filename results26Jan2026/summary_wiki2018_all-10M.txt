@@ -1,0 +1,95 @@
+=== Summary ===
+policy=LRU, cache_size=16123, hit_ratio=0.3921 (3528683/9000000)
+policy=LRU, cache_size=20154, hit_ratio=0.4049 (3644067/9000000)
+policy=LRU, cache_size=40308, hit_ratio=0.4408 (3967383/9000000)
+policy=LRU, cache_size=60463, hit_ratio=0.4692 (4222362/9000000)
+policy=LRU, cache_size=80617, hit_ratio=0.4992 (4492421/9000000)
+policy=LRU, cache_size=100772, hit_ratio=0.5319 (4787148/9000000)
+
+=== Summary ===
+policy=LRU-K, cache_size=16123, hit_ratio=0.4115 (3703252/9000000)
+policy=LRU-K, cache_size=20154, hit_ratio=0.4232 (3808968/9000000)
+policy=LRU-K, cache_size=40308, hit_ratio=0.4684 (4215896/9000000)
+policy=LRU-K, cache_size=60463, hit_ratio=0.5114 (4602524/9000000)
+policy=LRU-K, cache_size=80617, hit_ratio=0.5412 (4870586/9000000)
+policy=LRU-K, cache_size=100772, hit_ratio=0.5608 (5047351/9000000)
+
+=== Summary ===
+policy=LFUDA, cache_size=16123, hit_ratio=0.4269 (3842409/9000000)
+policy=LFUDA, cache_size=20154, hit_ratio=0.4410 (3969077/9000000)
+policy=LFUDA, cache_size=40308, hit_ratio=0.4851 (4365556/9000000)
+policy=LFUDA, cache_size=60463, hit_ratio=0.5136 (4622336/9000000)
+policy=LFUDA, cache_size=80617, hit_ratio=0.5368 (4831041/9000000)
+policy=LFUDA, cache_size=100772, hit_ratio=0.5604 (5044027/9000000)
+
+=== Summary 002 Fitur A0 === 
+GDBT+LRU, cache_size=16123, hit_ratio=0.4570 (4113058/9000000)
+GDBT+LRU, cache_size=20154, hit_ratio=0.4716 (4244042/9000000)
+GDBT+LRU, cache_size=40308, hit_ratio=0.5244 (4719249/9000000)
+GDBT+LRU, cache_size=60463, hit_ratio=0.5522 (4969628/9000000)
+GDBT+LRU, cache_size=80617, hit_ratio=0.5678 (5110260/9000000)
+GDBT+LRU, cache_size=100772, hit_ratio=0.5755 (5179239/9000000)
+
+=== Summary Fitur A0: Xu et al file 005 ===
+model=ilnse, cache_size=16123, hit_ratio=0.4149 (3733652/9000000)
+model=ilnse, cache_size=20154, hit_ratio=0.4382 (3944210/9000000)
+model=ilnse, cache_size=40308, hit_ratio=0.5147 (4632575/9000000)
+model=ilnse, cache_size=60463, hit_ratio=0.5508 (4957013/9000000)
+model=ilnse, cache_size=80617, hit_ratio=0.5746 (5171447/9000000)
+model=ilnse, cache_size=100772, hit_ratio=0.5911 (5319568/9000000)
+
+=== Summary A2 ===
+GDBT+LRU, cache_size=16123, hit_ratio=0.4576 (4118516/9000000)
+GDBT+LRU, cache_size=20154, hit_ratio=0.4733 (4259347/9000000)
+GDBT+LRU, cache_size=40308, hit_ratio=0.5240 (4715577/9000000)
+GDBT+LRU, cache_size=60463, hit_ratio=0.5506 (4955005/9000000)
+GDBT+LRU, cache_size=80617, hit_ratio=0.5645 (5080445/9000000)
+GDBT+LRU, cache_size=100772, hit_ratio=0.5704 (5133244/9000000)
+
+=== Summary IL Fitur A0 dengan konsep drift JSD file:results/wiki2018/004 ===
+cache_size=16123, hit_ratio=0.4085 (3676097/9000000)
+cache_size=20154, hit_ratio=0.4318 (3885932/9000000)
+cache_size=40308, hit_ratio=0.5245 (4720117/9000000)
+cache_size=60463, hit_ratio=0.5624 (5061941/9000000)
+cache_size=80617, hit_ratio=0.5872 (5284669/9000000)
+cache_size=100772, hit_ratio=0.6063 (5456389/9000000)
+
+=== Summary IL Fitur A2 dengan konsep drift JSD file:results/wiki2018/015 ===
+cache_size=16123, hit_ratio=0.4666 (4199042/9000000)
+cache_size=20154, hit_ratio=0.4806 (4325691/9000000)
+cache_size=40308, hit_ratio=0.5281 (4752822/9000000)
+cache_size=60463, hit_ratio=0.5593 (5033671/9000000)
+cache_size=80617, hit_ratio=0.5840 (5255573/9000000)
+cache_size=100772, hit_ratio=0.6033 (5430105/9000000)
+
+=== Summary IL Fitur A2 dengan konsep no_drift_detection file:results/wiki2018/018 ===
+cache_size=16123, hit_ratio=0.4648 (4183052/9000000)
+cache_size=20154, hit_ratio=0.4795 (4315496/9000000)
+cache_size=40308, hit_ratio=0.5291 (4762349/9000000)
+cache_size=60463, hit_ratio=0.5609 (5047845/9000000)
+cache_size=80617, hit_ratio=0.5826 (5243669/9000000)
+cache_size=100772, hit_ratio=0.5988 (5389649/9000000)
+
+=== Summary IL Fitur A2 dengan konsep drift JSD file:results/wiki2018/019 ===
+cache_size=16123, hit_ratio=0.4675 (4207405/9000000)
+cache_size=20154, hit_ratio=0.4805 (4324686/9000000)
+cache_size=40308, hit_ratio=0.5258 (4732175/9000000)
+cache_size=60463, hit_ratio=0.5596 (5036566/9000000)
+cache_size=80617, hit_ratio=0.5851 (5266250/9000000)
+cache_size=100772, hit_ratio=0.6049 (5444406/9000000)
+
+=== Summary IL Fitur A2 dengan konsep drift JSD file:results/wiki2018/020 ===
+cache_size=16123, hit_ratio=0.4676 (4208086/9000000)
+cache_size=20154, hit_ratio=0.4810 (4328907/9000000)
+cache_size=40308, hit_ratio=0.5254 (4728360/9000000)
+cache_size=60463, hit_ratio=0.5593 (5033862/9000000)
+cache_size=80617, hit_ratio=0.5849 (5264296/9000000)
+cache_size=100772, hit_ratio=0.6052 (5446986/9000000)
+
+=== Summary IL Fitur A2 dengan konsep drift JSD file:results/wiki2018/022 ===
+cache_size=16123, hit_ratio=0.4669 (4201807/9000000)
+cache_size=20154, hit_ratio=0.4808 (4327390/9000000)
+cache_size=40308, hit_ratio=0.5262 (4735877/9000000)
+cache_size=60463, hit_ratio=0.5596 (5036469/9000000)
+cache_size=80617, hit_ratio=0.5853 (5267635/9000000)
+cache_size=100772, hit_ratio=0.6056 (5450757/9000000)

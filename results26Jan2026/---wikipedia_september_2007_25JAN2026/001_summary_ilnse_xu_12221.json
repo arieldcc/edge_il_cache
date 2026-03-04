@@ -1,0 +1,15 @@
+{
+  "dataset": "wikipedia_september_2007",
+  "model": "ilnse_xu",
+  "cache_size_objects": 12221,
+  "total_requests": 9000000,
+  "warmup_requests": 1000000,
+  "slot_size": 100000,
+  "hit_ratio": 0.603745,
+  "cache_hits": 4829960,
+  "cache_requests": 8000000,
+  "num_slots": 90,
+  "warmup_slots": 10,
+  "cache_slots": 80,
+  "pop_top_percent": 0.2
+}

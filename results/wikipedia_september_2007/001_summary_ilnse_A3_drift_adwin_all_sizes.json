@@ -1,0 +1,42 @@
+{
+  "dataset": "wikipedia_september_2007",
+  "model": "ilnse_A3_drift_adwin",
+  "feature_set": "A3",
+  "drift_method": "adwin",
+  "num_features": 4,
+  "cache_sizes": [
+    12221,
+    15277,
+    30554,
+    45831,
+    61109,
+    76386
+  ],
+  "hr_curve": [
+    {
+      "cache_size_objects": 12221,
+      "hit_ratio": 0.622392625
+    },
+    {
+      "cache_size_objects": 15277,
+      "hit_ratio": 0.63007975
+    },
+    {
+      "cache_size_objects": 30554,
+      "hit_ratio": 0.6545525
+    },
+    {
+      "cache_size_objects": 45831,
+      "hit_ratio": 0.65837775
+    },
+    {
+      "cache_size_objects": 61109,
+      "hit_ratio": 0.66359475
+    },
+    {
+      "cache_size_objects": 76386,
+      "hit_ratio": 0.66712425
+    }
+  ],
+  "avg_hr": 0.6493536041666667
+}

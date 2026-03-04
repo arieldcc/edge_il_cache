@@ -1,0 +1,15 @@
+{
+  "dataset": "wikipedia_oktober_2007",
+  "model": "gdbt",
+  "cache_size_objects": 41252,
+  "total_requests": 8000000,
+  "warmup_requests": 1000000,
+  "slot_size": 100000,
+  "gdbt_n_estimators": 30,
+  "gdbt_update_interval": 1000000,
+  "pop_top_percent": 0.2,
+  "hit_ratio": 0.6829875714285715,
+  "cache_hits": 4780913,
+  "cache_requests": 7000000,
+  "num_rebuilds": 8
+}

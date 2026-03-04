@@ -1,0 +1,10 @@
+{
+  "dataset": "wiki2018",
+  "policy": "LRU",
+  "cache_size_objects": 16123,
+  "total_requests_config": 10000000,
+  "warmup_requests_config": 1000000,
+  "cache_hits": 3528683,
+  "cache_requests": 9000000,
+  "hit_ratio": 0.3920758888888889
+}

@@ -1,0 +1,16 @@
+{
+  "dataset": "wiki2018",
+  "model": "gdbt_A2_overhead",
+  "feature_set": "A2",
+  "num_features": 10,
+  "cache_sizes": [
+    16123
+  ],
+  "hr_curve": [
+    {
+      "cache_size_objects": 16123,
+      "hit_ratio": 0.4576128888888889
+    }
+  ],
+  "avg_hr": 0.4576128888888889
+}

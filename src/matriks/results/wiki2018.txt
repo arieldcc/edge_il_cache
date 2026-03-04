@@ -1,0 +1,47 @@
+=== Summary 001_ilnse_A2_full===
+cache_size=16123, hit_ratio=0.4670 (4202953/9000000)
+cache_size=20154, hit_ratio=0.4812 (4330540/9000000)
+cache_size=40308, hit_ratio=0.5260 (4733930/9000000)
+cache_size=60463, hit_ratio=0.5596 (5036447/9000000)
+cache_size=80617, hit_ratio=0.5853 (5267674/9000000)
+cache_size=100772, hit_ratio=0.6056 (5450840/9000000)
+
+=== Summary 001_ilnse_A2_guard_only===
+cache_size=16123, hit_ratio=0.4676 (4208215/9000000)
+cache_size=20154, hit_ratio=0.4828 (4344873/9000000)
+cache_size=40308, hit_ratio=0.5261 (4734605/9000000)
+cache_size=60463, hit_ratio=0.5588 (5029452/9000000)
+cache_size=80617, hit_ratio=0.5847 (5261853/9000000)
+cache_size=100772, hit_ratio=0.6052 (5446446/9000000)
+
+=== Summary 001_ilnse_A2_guard_no_quality===
+cache_size=16123, hit_ratio=0.4674 (4206423/9000000)
+cache_size=20154, hit_ratio=0.4822 (4339377/9000000)
+cache_size=40308, hit_ratio=0.5256 (4730614/9000000)
+cache_size=60463, hit_ratio=0.5592 (5032814/9000000)
+cache_size=80617, hit_ratio=0.5847 (5262006/9000000)
+cache_size=100772, hit_ratio=0.6040 (5435635/9000000)
+
+=== Summary 001_ilnse_A1_full===
+cache_size=16123, hit_ratio=0.4624 (4161593/9000000)
+cache_size=20154, hit_ratio=0.4774 (4296235/9000000)
+cache_size=40308, hit_ratio=0.5296 (4766043/9000000)
+cache_size=60463, hit_ratio=0.5645 (5080670/9000000)
+cache_size=80617, hit_ratio=0.5884 (5295891/9000000)
+cache_size=100772, hit_ratio=0.6070 (5463054/9000000)
+
+=== Summary 001_ilnse_A2_drift_only===
+cache_size=16123, hit_ratio=0.4610 (4148721/9000000)
+cache_size=20154, hit_ratio=0.4748 (4273313/9000000)
+cache_size=40308, hit_ratio=0.5192 (4673245/9000000)
+cache_size=60463, hit_ratio=0.5465 (4918099/9000000)
+cache_size=80617, hit_ratio=0.5680 (5112129/9000000)
+cache_size=100772, hit_ratio=0.5827 (5243991/9000000)
+
+=== Summary 001_ilnse_A2_fixed===
+cache_size=16123, hit_ratio=0.4592 (4132586/9000000)
+cache_size=20154, hit_ratio=0.4747 (4271946/9000000)
+cache_size=40308, hit_ratio=0.5183 (4664504/9000000)
+cache_size=60463, hit_ratio=0.5484 (4935847/9000000)
+cache_size=80617, hit_ratio=0.5738 (5164449/9000000)
+cache_size=100772, hit_ratio=0.5909 (5317964/9000000)

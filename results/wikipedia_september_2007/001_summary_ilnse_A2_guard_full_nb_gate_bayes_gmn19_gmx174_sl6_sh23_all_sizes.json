@@ -1,0 +1,56 @@
+{
+  "dataset": "wikipedia_september_2007",
+  "model": "ilnse_A2_guard_full_nb_gate_bayes_gmn19_gmx174_sl6_sh23",
+  "feature_set": "A2",
+  "base_learner": "nb",
+  "drift_control_mode": "scaled",
+  "drift_norm_power": 1.0,
+  "drift_threshold": 0.6,
+  "drift_alpha_low": 0.04,
+  "drift_alpha_high": 0.18,
+  "drift_use_capacity_scale": true,
+  "drift_gain": 1.5,
+  "drift_guard_precision_min": 0.06,
+  "drift_guard_spread_min": 0.01,
+  "score_gate_use_adaptive": true,
+  "score_gate_min_percent": 0.01861234792942396,
+  "score_gate_max_percent": 0.1740318050786767,
+  "score_gate_spread_low": 0.005675237625638185,
+  "score_gate_spread_high": 0.022636520477683,
+  "num_features": 10,
+  "cache_sizes": [
+    12221,
+    15277,
+    30554,
+    45831,
+    61109,
+    76386
+  ],
+  "hr_curve": [
+    {
+      "cache_size_objects": 12221,
+      "hit_ratio": 0.637453125
+    },
+    {
+      "cache_size_objects": 15277,
+      "hit_ratio": 0.6451965
+    },
+    {
+      "cache_size_objects": 30554,
+      "hit_ratio": 0.67231825
+    },
+    {
+      "cache_size_objects": 45831,
+      "hit_ratio": 0.69068375
+    },
+    {
+      "cache_size_objects": 61109,
+      "hit_ratio": 0.70355925
+    },
+    {
+      "cache_size_objects": 76386,
+      "hit_ratio": 0.71347675
+    }
+  ],
+  "avg_hr": 0.6771146041666668
+}

@@ -1,0 +1,1010 @@
+{
+  "dataset": "wiki2018",
+  "model": "ilnse_xu",
+  "cache_size_objects": 80617,
+  "total_requests": 10000000,
+  "warmup_requests": 1000000,
+  "slot_size": 100000,
+  "slots": [
+    {
+      "slot_index": 1,
+      "phase": "warmup",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 0,
+      "slot_end_request_idx": 99999,
+      "stats_total_requests": 0,
+      "stats_cache_hits": 0,
+      "hit_ratio": 0.0
+    },
+    {
+      "slot_index": 2,
+      "phase": "warmup",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 100000,
+      "slot_end_request_idx": 199999,
+      "stats_total_requests": 0,
+      "stats_cache_hits": 0,
+      "hit_ratio": 0.0
+    },
+    {
+      "slot_index": 3,
+      "phase": "warmup",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 200000,
+      "slot_end_request_idx": 299999,
+      "stats_total_requests": 0,
+      "stats_cache_hits": 0,
+      "hit_ratio": 0.0
+    },
+    {
+      "slot_index": 4,
+      "phase": "warmup",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 300000,
+      "slot_end_request_idx": 399999,
+      "stats_total_requests": 0,
+      "stats_cache_hits": 0,
+      "hit_ratio": 0.0
+    },
+    {
+      "slot_index": 5,
+      "phase": "warmup",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 400000,
+      "slot_end_request_idx": 499999,
+      "stats_total_requests": 0,
+      "stats_cache_hits": 0,
+      "hit_ratio": 0.0
+    },
+    {
+      "slot_index": 6,
+      "phase": "warmup",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 500000,
+      "slot_end_request_idx": 599999,
+      "stats_total_requests": 0,
+      "stats_cache_hits": 0,
+      "hit_ratio": 0.0
+    },
+    {
+      "slot_index": 7,
+      "phase": "warmup",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 600000,
+      "slot_end_request_idx": 699999,
+      "stats_total_requests": 0,
+      "stats_cache_hits": 0,
+      "hit_ratio": 0.0
+    },
+    {
+      "slot_index": 8,
+      "phase": "warmup",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 700000,
+      "slot_end_request_idx": 799999,
+      "stats_total_requests": 0,
+      "stats_cache_hits": 0,
+      "hit_ratio": 0.0
+    },
+    {
+      "slot_index": 9,
+      "phase": "warmup",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 800000,
+      "slot_end_request_idx": 899999,
+      "stats_total_requests": 0,
+      "stats_cache_hits": 0,
+      "hit_ratio": 0.0
+    },
+    {
+      "slot_index": 10,
+      "phase": "warmup",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 900000,
+      "slot_end_request_idx": 999999,
+      "stats_total_requests": 0,
+      "stats_cache_hits": 0,
+      "hit_ratio": 0.0
+    },
+    {
+      "slot_index": 11,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 1000000,
+      "slot_end_request_idx": 1099999,
+      "stats_total_requests": 100000,
+      "stats_cache_hits": 37619,
+      "hit_ratio": 0.37619
+    },
+    {
+      "slot_index": 12,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 1100000,
+      "slot_end_request_idx": 1199999,
+      "stats_total_requests": 200000,
+      "stats_cache_hits": 80917,
+      "hit_ratio": 0.404585
+    },
+    {
+      "slot_index": 13,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 1200000,
+      "slot_end_request_idx": 1299999,
+      "stats_total_requests": 300000,
+      "stats_cache_hits": 131931,
+      "hit_ratio": 0.43977
+    },
+    {
+      "slot_index": 14,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 1300000,
+      "slot_end_request_idx": 1399999,
+      "stats_total_requests": 400000,
+      "stats_cache_hits": 176961,
+      "hit_ratio": 0.4424025
+    },
+    {
+      "slot_index": 15,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 1400000,
+      "slot_end_request_idx": 1499999,
+      "stats_total_requests": 500000,
+      "stats_cache_hits": 227236,
+      "hit_ratio": 0.454472
+    },
+    {
+      "slot_index": 16,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 1500000,
+      "slot_end_request_idx": 1599999,
+      "stats_total_requests": 600000,
+      "stats_cache_hits": 279999,
+      "hit_ratio": 0.466665
+    },
+    {
+      "slot_index": 17,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 1600000,
+      "slot_end_request_idx": 1699999,
+      "stats_total_requests": 700000,
+      "stats_cache_hits": 325895,
+      "hit_ratio": 0.4655642857142857
+    },
+    {
+      "slot_index": 18,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 1700000,
+      "slot_end_request_idx": 1799999,
+      "stats_total_requests": 800000,
+      "stats_cache_hits": 381189,
+      "hit_ratio": 0.47648625
+    },
+    {
+      "slot_index": 19,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 1800000,
+      "slot_end_request_idx": 1899999,
+      "stats_total_requests": 900000,
+      "stats_cache_hits": 433760,
+      "hit_ratio": 0.4819555555555556
+    },
+    {
+      "slot_index": 20,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 1900000,
+      "slot_end_request_idx": 1999999,
+      "stats_total_requests": 1000000,
+      "stats_cache_hits": 484046,
+      "hit_ratio": 0.484046
+    },
+    {
+      "slot_index": 21,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 2000000,
+      "slot_end_request_idx": 2099999,
+      "stats_total_requests": 1100000,
+      "stats_cache_hits": 541584,
+      "hit_ratio": 0.4923490909090909
+    },
+    {
+      "slot_index": 22,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 2100000,
+      "slot_end_request_idx": 2199999,
+      "stats_total_requests": 1200000,
+      "stats_cache_hits": 592672,
+      "hit_ratio": 0.49389333333333335
+    },
+    {
+      "slot_index": 23,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 2200000,
+      "slot_end_request_idx": 2299999,
+      "stats_total_requests": 1300000,
+      "stats_cache_hits": 646770,
+      "hit_ratio": 0.49751538461538464
+    },
+    {
+      "slot_index": 24,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 2300000,
+      "slot_end_request_idx": 2399999,
+      "stats_total_requests": 1400000,
+      "stats_cache_hits": 705003,
+      "hit_ratio": 0.5035735714285714
+    },
+    {
+      "slot_index": 25,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 2400000,
+      "slot_end_request_idx": 2499999,
+      "stats_total_requests": 1500000,
+      "stats_cache_hits": 755065,
+      "hit_ratio": 0.5033766666666667
+    },
+    {
+      "slot_index": 26,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 2500000,
+      "slot_end_request_idx": 2599999,
+      "stats_total_requests": 1600000,
+      "stats_cache_hits": 813532,
+      "hit_ratio": 0.5084575
+    },
+    {
+      "slot_index": 27,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 2600000,
+      "slot_end_request_idx": 2699999,
+      "stats_total_requests": 1700000,
+      "stats_cache_hits": 870094,
+      "hit_ratio": 0.51182
+    },
+    {
+      "slot_index": 28,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 2700000,
+      "slot_end_request_idx": 2799999,
+      "stats_total_requests": 1800000,
+      "stats_cache_hits": 922586,
+      "hit_ratio": 0.5125477777777778
+    },
+    {
+      "slot_index": 29,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 2800000,
+      "slot_end_request_idx": 2899999,
+      "stats_total_requests": 1900000,
+      "stats_cache_hits": 983605,
+      "hit_ratio": 0.5176868421052632
+    },
+    {
+      "slot_index": 30,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 2900000,
+      "slot_end_request_idx": 2999999,
+      "stats_total_requests": 2000000,
+      "stats_cache_hits": 1038272,
+      "hit_ratio": 0.519136
+    },
+    {
+      "slot_index": 31,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 3000000,
+      "slot_end_request_idx": 3099999,
+      "stats_total_requests": 2100000,
+      "stats_cache_hits": 1094247,
+      "hit_ratio": 0.52107
+    },
+    {
+      "slot_index": 32,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 3100000,
+      "slot_end_request_idx": 3199999,
+      "stats_total_requests": 2200000,
+      "stats_cache_hits": 1156512,
+      "hit_ratio": 0.5256872727272728
+    },
+    {
+      "slot_index": 33,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 3200000,
+      "slot_end_request_idx": 3299999,
+      "stats_total_requests": 2300000,
+      "stats_cache_hits": 1209320,
+      "hit_ratio": 0.5257913043478261
+    },
+    {
+      "slot_index": 34,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 3300000,
+      "slot_end_request_idx": 3399999,
+      "stats_total_requests": 2400000,
+      "stats_cache_hits": 1269653,
+      "hit_ratio": 0.5290220833333333
+    },
+    {
+      "slot_index": 35,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 3400000,
+      "slot_end_request_idx": 3499999,
+      "stats_total_requests": 2500000,
+      "stats_cache_hits": 1330552,
+      "hit_ratio": 0.5322208
+    },
+    {
+      "slot_index": 36,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 3500000,
+      "slot_end_request_idx": 3599999,
+      "stats_total_requests": 2600000,
+      "stats_cache_hits": 1383653,
+      "hit_ratio": 0.5321742307692308
+    },
+    {
+      "slot_index": 37,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 3600000,
+      "slot_end_request_idx": 3699999,
+      "stats_total_requests": 2700000,
+      "stats_cache_hits": 1447495,
+      "hit_ratio": 0.5361092592592592
+    },
+    {
+      "slot_index": 38,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 3700000,
+      "slot_end_request_idx": 3799999,
+      "stats_total_requests": 2800000,
+      "stats_cache_hits": 1505463,
+      "hit_ratio": 0.5376653571428571
+    },
+    {
+      "slot_index": 39,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 3800000,
+      "slot_end_request_idx": 3899999,
+      "stats_total_requests": 2900000,
+      "stats_cache_hits": 1562871,
+      "hit_ratio": 0.5389210344827586
+    },
+    {
+      "slot_index": 40,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 3900000,
+      "slot_end_request_idx": 3999999,
+      "stats_total_requests": 3000000,
+      "stats_cache_hits": 1627449,
+      "hit_ratio": 0.542483
+    },
+    {
+      "slot_index": 41,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 4000000,
+      "slot_end_request_idx": 4099999,
+      "stats_total_requests": 3100000,
+      "stats_cache_hits": 1683210,
+      "hit_ratio": 0.5429709677419354
+    },
+    {
+      "slot_index": 42,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 4100000,
+      "slot_end_request_idx": 4199999,
+      "stats_total_requests": 3200000,
+      "stats_cache_hits": 1743859,
+      "hit_ratio": 0.5449559375
+    },
+    {
+      "slot_index": 43,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 4200000,
+      "slot_end_request_idx": 4299999,
+      "stats_total_requests": 3300000,
+      "stats_cache_hits": 1807370,
+      "hit_ratio": 0.5476878787878788
+    },
+    {
+      "slot_index": 44,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 4300000,
+      "slot_end_request_idx": 4399999,
+      "stats_total_requests": 3400000,
+      "stats_cache_hits": 1861869,
+      "hit_ratio": 0.5476085294117647
+    },
+    {
+      "slot_index": 45,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 4400000,
+      "slot_end_request_idx": 4499999,
+      "stats_total_requests": 3500000,
+      "stats_cache_hits": 1925160,
+      "hit_ratio": 0.5500457142857142
+    },
+    {
+      "slot_index": 46,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 4500000,
+      "slot_end_request_idx": 4599999,
+      "stats_total_requests": 3600000,
+      "stats_cache_hits": 1985294,
+      "hit_ratio": 0.5514705555555556
+    },
+    {
+      "slot_index": 47,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 4600000,
+      "slot_end_request_idx": 4699999,
+      "stats_total_requests": 3700000,
+      "stats_cache_hits": 2041348,
+      "hit_ratio": 0.5517156756756757
+    },
+    {
+      "slot_index": 48,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 4700000,
+      "slot_end_request_idx": 4799999,
+      "stats_total_requests": 3800000,
+      "stats_cache_hits": 2105780,
+      "hit_ratio": 0.5541526315789473
+    },
+    {
+      "slot_index": 49,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 4800000,
+      "slot_end_request_idx": 4899999,
+      "stats_total_requests": 3900000,
+      "stats_cache_hits": 2162374,
+      "hit_ratio": 0.5544548717948717
+    },
+    {
+      "slot_index": 50,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 4900000,
+      "slot_end_request_idx": 4999999,
+      "stats_total_requests": 4000000,
+      "stats_cache_hits": 2221265,
+      "hit_ratio": 0.55531625
+    },
+    {
+      "slot_index": 51,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 5000000,
+      "slot_end_request_idx": 5099999,
+      "stats_total_requests": 4100000,
+      "stats_cache_hits": 2285029,
+      "hit_ratio": 0.5573241463414634
+    },
+    {
+      "slot_index": 52,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 5100000,
+      "slot_end_request_idx": 5199999,
+      "stats_total_requests": 4200000,
+      "stats_cache_hits": 2339122,
+      "hit_ratio": 0.5569338095238096
+    },
+    {
+      "slot_index": 53,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 5200000,
+      "slot_end_request_idx": 5299999,
+      "stats_total_requests": 4300000,
+      "stats_cache_hits": 2400959,
+      "hit_ratio": 0.5583625581395348
+    },
+    {
+      "slot_index": 54,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 5300000,
+      "slot_end_request_idx": 5399999,
+      "stats_total_requests": 4400000,
+      "stats_cache_hits": 2461237,
+      "hit_ratio": 0.5593720454545454
+    },
+    {
+      "slot_index": 55,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 5400000,
+      "slot_end_request_idx": 5499999,
+      "stats_total_requests": 4500000,
+      "stats_cache_hits": 2515572,
+      "hit_ratio": 0.559016
+    },
+    {
+      "slot_index": 56,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 5500000,
+      "slot_end_request_idx": 5599999,
+      "stats_total_requests": 4600000,
+      "stats_cache_hits": 2579282,
+      "hit_ratio": 0.5607134782608696
+    },
+    {
+      "slot_index": 57,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 5600000,
+      "slot_end_request_idx": 5699999,
+      "stats_total_requests": 4700000,
+      "stats_cache_hits": 2636739,
+      "hit_ratio": 0.5610082978723404
+    },
+    {
+      "slot_index": 58,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 5700000,
+      "slot_end_request_idx": 5799999,
+      "stats_total_requests": 4800000,
+      "stats_cache_hits": 2693991,
+      "hit_ratio": 0.561248125
+    },
+    {
+      "slot_index": 59,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 5800000,
+      "slot_end_request_idx": 5899999,
+      "stats_total_requests": 4900000,
+      "stats_cache_hits": 2757151,
+      "hit_ratio": 0.5626838775510205
+    },
+    {
+      "slot_index": 60,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 5900000,
+      "slot_end_request_idx": 5999999,
+      "stats_total_requests": 5000000,
+      "stats_cache_hits": 2811378,
+      "hit_ratio": 0.5622756
+    },
+    {
+      "slot_index": 61,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 6000000,
+      "slot_end_request_idx": 6099999,
+      "stats_total_requests": 5100000,
+      "stats_cache_hits": 2871534,
+      "hit_ratio": 0.5630458823529412
+    },
+    {
+      "slot_index": 62,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 6100000,
+      "slot_end_request_idx": 6199999,
+      "stats_total_requests": 5200000,
+      "stats_cache_hits": 2932239,
+      "hit_ratio": 0.5638921153846154
+    },
+    {
+      "slot_index": 63,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 6200000,
+      "slot_end_request_idx": 6299999,
+      "stats_total_requests": 5300000,
+      "stats_cache_hits": 2985595,
+      "hit_ratio": 0.5633198113207547
+    },
+    {
+      "slot_index": 64,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 6300000,
+      "slot_end_request_idx": 6399999,
+      "stats_total_requests": 5400000,
+      "stats_cache_hits": 3048314,
+      "hit_ratio": 0.5645025925925926
+    },
+    {
+      "slot_index": 65,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 6400000,
+      "slot_end_request_idx": 6499999,
+      "stats_total_requests": 5500000,
+      "stats_cache_hits": 3106345,
+      "hit_ratio": 0.56479
+    },
+    {
+      "slot_index": 66,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 6500000,
+      "slot_end_request_idx": 6599999,
+      "stats_total_requests": 5600000,
+      "stats_cache_hits": 3161993,
+      "hit_ratio": 0.5646416071428572
+    },
+    {
+      "slot_index": 67,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 6600000,
+      "slot_end_request_idx": 6699999,
+      "stats_total_requests": 5700000,
+      "stats_cache_hits": 3224604,
+      "hit_ratio": 0.56572
+    },
+    {
+      "slot_index": 68,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 6700000,
+      "slot_end_request_idx": 6799999,
+      "stats_total_requests": 5800000,
+      "stats_cache_hits": 3279575,
+      "hit_ratio": 0.5654439655172414
+    },
+    {
+      "slot_index": 69,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 6800000,
+      "slot_end_request_idx": 6899999,
+      "stats_total_requests": 5900000,
+      "stats_cache_hits": 3338092,
+      "hit_ratio": 0.5657783050847458
+    },
+    {
+      "slot_index": 70,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 6900000,
+      "slot_end_request_idx": 6999999,
+      "stats_total_requests": 6000000,
+      "stats_cache_hits": 3399869,
+      "hit_ratio": 0.5666448333333334
+    },
+    {
+      "slot_index": 71,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 7000000,
+      "slot_end_request_idx": 7099999,
+      "stats_total_requests": 6100000,
+      "stats_cache_hits": 3452560,
+      "hit_ratio": 0.5659934426229508
+    },
+    {
+      "slot_index": 72,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 7100000,
+      "slot_end_request_idx": 7199999,
+      "stats_total_requests": 6200000,
+      "stats_cache_hits": 3514559,
+      "hit_ratio": 0.5668643548387097
+    },
+    {
+      "slot_index": 73,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 7200000,
+      "slot_end_request_idx": 7299999,
+      "stats_total_requests": 6300000,
+      "stats_cache_hits": 3573207,
+      "hit_ratio": 0.5671757142857143
+    },
+    {
+      "slot_index": 74,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 7300000,
+      "slot_end_request_idx": 7399999,
+      "stats_total_requests": 6400000,
+      "stats_cache_hits": 3627805,
+      "hit_ratio": 0.56684453125
+    },
+    {
+      "slot_index": 75,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 7400000,
+      "slot_end_request_idx": 7499999,
+      "stats_total_requests": 6500000,
+      "stats_cache_hits": 3690451,
+      "hit_ratio": 0.5677616923076924
+    },
+    {
+      "slot_index": 76,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 7500000,
+      "slot_end_request_idx": 7599999,
+      "stats_total_requests": 6600000,
+      "stats_cache_hits": 3746301,
+      "hit_ratio": 0.5676213636363636
+    },
+    {
+      "slot_index": 77,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 7600000,
+      "slot_end_request_idx": 7699999,
+      "stats_total_requests": 6700000,
+      "stats_cache_hits": 3803870,
+      "hit_ratio": 0.5677417910447761
+    },
+    {
+      "slot_index": 78,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 7700000,
+      "slot_end_request_idx": 7799999,
+      "stats_total_requests": 6800000,
+      "stats_cache_hits": 3866265,
+      "hit_ratio": 0.5685683823529412
+    },
+    {
+      "slot_index": 79,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 7800000,
+      "slot_end_request_idx": 7899999,
+      "stats_total_requests": 6900000,
+      "stats_cache_hits": 3919342,
+      "hit_ratio": 0.568020579710145
+    },
+    {
+      "slot_index": 80,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 7900000,
+      "slot_end_request_idx": 7999999,
+      "stats_total_requests": 7000000,
+      "stats_cache_hits": 3979984,
+      "hit_ratio": 0.5685691428571429
+    },
+    {
+      "slot_index": 81,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 8000000,
+      "slot_end_request_idx": 8099999,
+      "stats_total_requests": 7100000,
+      "stats_cache_hits": 4039906,
+      "hit_ratio": 0.5690008450704226
+    },
+    {
+      "slot_index": 82,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 8100000,
+      "slot_end_request_idx": 8199999,
+      "stats_total_requests": 7200000,
+      "stats_cache_hits": 4093447,
+      "hit_ratio": 0.5685343055555555
+    },
+    {
+      "slot_index": 83,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 8200000,
+      "slot_end_request_idx": 8299999,
+      "stats_total_requests": 7300000,
+      "stats_cache_hits": 4156475,
+      "hit_ratio": 0.5693801369863014
+    },
+    {
+      "slot_index": 84,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 8300000,
+      "slot_end_request_idx": 8399999,
+      "stats_total_requests": 7400000,
+      "stats_cache_hits": 4213420,
+      "hit_ratio": 0.5693810810810811
+    },
+    {
+      "slot_index": 85,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 8400000,
+      "slot_end_request_idx": 8499999,
+      "stats_total_requests": 7500000,
+      "stats_cache_hits": 4270066,
+      "hit_ratio": 0.5693421333333333
+    },
+    {
+      "slot_index": 86,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 8500000,
+      "slot_end_request_idx": 8599999,
+      "stats_total_requests": 7600000,
+      "stats_cache_hits": 4332603,
+      "hit_ratio": 0.5700793421052631
+    },
+    {
+      "slot_index": 87,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 8600000,
+      "slot_end_request_idx": 8699999,
+      "stats_total_requests": 7700000,
+      "stats_cache_hits": 4386896,
+      "hit_ratio": 0.5697267532467533
+    },
+    {
+      "slot_index": 88,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 8700000,
+      "slot_end_request_idx": 8799999,
+      "stats_total_requests": 7800000,
+      "stats_cache_hits": 4446478,
+      "hit_ratio": 0.570061282051282
+    },
+    {
+      "slot_index": 89,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 8800000,
+      "slot_end_request_idx": 8899999,
+      "stats_total_requests": 7900000,
+      "stats_cache_hits": 4507515,
+      "hit_ratio": 0.5705715189873418
+    },
+    {
+      "slot_index": 90,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 8900000,
+      "slot_end_request_idx": 8999999,
+      "stats_total_requests": 8000000,
+      "stats_cache_hits": 4564060,
+      "hit_ratio": 0.5705075
+    },
+    {
+      "slot_index": 91,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 9000000,
+      "slot_end_request_idx": 9099999,
+      "stats_total_requests": 8100000,
+      "stats_cache_hits": 4622107,
+      "hit_ratio": 0.5706304938271605
+    },
+    {
+      "slot_index": 92,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 9100000,
+      "slot_end_request_idx": 9199999,
+      "stats_total_requests": 8200000,
+      "stats_cache_hits": 4680782,
+      "hit_ratio": 0.5708270731707317
+    },
+    {
+      "slot_index": 93,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 9200000,
+      "slot_end_request_idx": 9299999,
+      "stats_total_requests": 8300000,
+      "stats_cache_hits": 4742190,
+      "hit_ratio": 0.5713481927710843
+    },
+    {
+      "slot_index": 94,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 9300000,
+      "slot_end_request_idx": 9399999,
+      "stats_total_requests": 8400000,
+      "stats_cache_hits": 4804057,
+      "hit_ratio": 0.5719115476190476
+    },
+    {
+      "slot_index": 95,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 9400000,
+      "slot_end_request_idx": 9499999,
+      "stats_total_requests": 8500000,
+      "stats_cache_hits": 4864672,
+      "hit_ratio": 0.5723143529411765
+    },
+    {
+      "slot_index": 96,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 9500000,
+      "slot_end_request_idx": 9599999,
+      "stats_total_requests": 8600000,
+      "stats_cache_hits": 4924801,
+      "hit_ratio": 0.5726512790697674
+    },
+    {
+      "slot_index": 97,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 9600000,
+      "slot_end_request_idx": 9699999,
+      "stats_total_requests": 8700000,
+      "stats_cache_hits": 4985418,
+      "hit_ratio": 0.5730365517241379
+    },
+    {
+      "slot_index": 98,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 9700000,
+      "slot_end_request_idx": 9799999,
+      "stats_total_requests": 8800000,
+      "stats_cache_hits": 5047019,
+      "hit_ratio": 0.5735248863636364
+    },
+    {
+      "slot_index": 99,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 9800000,
+      "slot_end_request_idx": 9899999,
+      "stats_total_requests": 8900000,
+      "stats_cache_hits": 5109686,
+      "hit_ratio": 0.5741220224719101
+    },
+    {
+      "slot_index": 100,
+      "phase": "cache",
+      "slot_size_requests": 100000,
+      "slot_start_request_idx": 9900000,
+      "slot_end_request_idx": 9999999,
+      "stats_total_requests": 9000000,
+      "stats_cache_hits": 5171447,
+      "hit_ratio": 0.5746052222222222
+    }
+  ]
+}

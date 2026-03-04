@@ -1,0 +1,17 @@
+{
+  "dataset": "wikipedia_september_2007",
+  "model": "ilnse_A2_guard_no_guard_nb_overhead",
+  "feature_set": "A2",
+  "base_learner": "nb",
+  "num_features": 10,
+  "cache_sizes": [
+    12221
+  ],
+  "hr_curve": [
+    {
+      "cache_size_objects": 12221,
+      "hit_ratio": 0.63130775
+    }
+  ],
+  "avg_hr": 0.63130775
+}

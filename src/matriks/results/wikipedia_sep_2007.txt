@@ -1,0 +1,80 @@
+=== Summary 001_ilnse_A2_full===
+cache_size=12221, hit_ratio=0.6368 (5094596/8000000)
+cache_size=15277, hit_ratio=0.6441 (5152575/8000000)
+cache_size=30554, hit_ratio=0.6704 (5363216/8000000)
+cache_size=45831, hit_ratio=0.6897 (5517768/8000000)
+cache_size=61109, hit_ratio=0.7042 (5633696/8000000)
+cache_size=76386, hit_ratio=0.7149 (5719326/8000000)
+
+=== Summary 001_ilnse_A2_guard_only===
+cache_size=12221, hit_ratio=0.6367 (5093716/8000000)
+cache_size=15277, hit_ratio=0.6445 (5156049/8000000)
+cache_size=30554, hit_ratio=0.6697 (5357831/8000000)
+cache_size=45831, hit_ratio=0.6893 (5514025/8000000)
+cache_size=61109, hit_ratio=0.7039 (5630827/8000000)
+cache_size=76386, hit_ratio=0.7146 (5717084/8000000)
+
+=== Summary 001_ilnse_A2_guard_qsweep_q0.9_ema0.2_min0.7_max1.3_boost0.1_gate0.05===
+cache_size=12221, hit_ratio=0.6367 (5093728/8000000)
+cache_size=15277, hit_ratio=0.6445 (5156043/8000000)
+cache_size=30554, hit_ratio=0.6697 (5357819/8000000)
+cache_size=45831, hit_ratio=0.6893 (5514042/8000000)
+cache_size=61109, hit_ratio=0.7039 (5630852/8000000)
+cache_size=76386, hit_ratio=0.7146 (5717037/8000000)
+
+=== Summary 001_ilnse_A2_guard_no_gate===
+cache_size=12221, hit_ratio=0.6367 (5093711/8000000)
+cache_size=15277, hit_ratio=0.6445 (5156032/8000000)
+cache_size=30554, hit_ratio=0.6696 (5357004/8000000)
+cache_size=45831, hit_ratio=0.6871 (5496731/8000000)
+cache_size=61109, hit_ratio=0.6992 (5593931/8000000)
+cache_size=76386, hit_ratio=0.7079 (5663578/8000000)
+
+=== Summary 001_ilnse_A2_guard_quality_only===
+cache_size=12221, hit_ratio=0.6315 (5052128/8000000)
+cache_size=15277, hit_ratio=0.6395 (5116231/8000000)
+cache_size=30554, hit_ratio=0.6669 (5335179/8000000)
+cache_size=45831, hit_ratio=0.6854 (5483458/8000000)
+cache_size=61109, hit_ratio=0.6977 (5581334/8000000)
+cache_size=76386, hit_ratio=0.7065 (5652209/8000000)
+
+=== Summary 001_ilnse_A2_guard_precision_only===
+cache_size=12221, hit_ratio=0.6366 (5092975/8000000)
+cache_size=15277, hit_ratio=0.6441 (5152911/8000000)
+cache_size=30554, hit_ratio=0.6689 (5351194/8000000)
+cache_size=45831, hit_ratio=0.6850 (5480325/8000000)
+cache_size=61109, hit_ratio=0.6964 (5571174/8000000)
+cache_size=76386, hit_ratio=0.7040 (5631781/8000000)
+
+=== Summary 001_ilnse_A2_guard_no_guard===
+cache_size=12221, hit_ratio=0.6313 (5050465/8000000)
+cache_size=15277, hit_ratio=0.6390 (5112032/8000000)
+cache_size=30554, hit_ratio=0.6666 (5333109/8000000)
+cache_size=45831, hit_ratio=0.6839 (5471354/8000000)
+cache_size=61109, hit_ratio=0.6956 (5564585/8000000)
+cache_size=76386, hit_ratio=0.7033 (5626490/8000000)
+
+=== Summary 001_ilnse_A1_full===
+cache_size=12221, hit_ratio=0.6352 (5081760/8000000)
+cache_size=15277, hit_ratio=0.6430 (5144334/8000000)
+cache_size=30554, hit_ratio=0.6723 (5378378/8000000)
+cache_size=45831, hit_ratio=0.6905 (5524279/8000000)
+cache_size=61109, hit_ratio=0.7039 (5630881/8000000)
+cache_size=76386, hit_ratio=0.7136 (5708946/8000000)
+
+=== Summary 001_ilnse_A2_drift_only===
+cache_size=12221, hit_ratio=0.6320 (5055610/8000000)
+cache_size=15277, hit_ratio=0.6393 (5114745/8000000)
+cache_size=30554, hit_ratio=0.6666 (5332678/8000000)
+cache_size=45831, hit_ratio=0.6814 (5451457/8000000)
+cache_size=61109, hit_ratio=0.6918 (5534407/8000000)
+cache_size=76386, hit_ratio=0.6987 (5589438/8000000)
+
+=== Summary 001_ilnse_A2_fixed===
+cache_size=12221, hit_ratio=0.6315 (5051825/8000000)
+cache_size=15277, hit_ratio=0.6393 (5114259/8000000)
+cache_size=30554, hit_ratio=0.6658 (5326344/8000000)
+cache_size=45831, hit_ratio=0.6843 (5474754/8000000)
+cache_size=61109, hit_ratio=0.6960 (5568298/8000000)
+cache_size=76386, hit_ratio=0.7047 (5637911/8000000)
+

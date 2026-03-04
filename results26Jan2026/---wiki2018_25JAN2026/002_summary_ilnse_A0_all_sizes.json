@@ -1,0 +1,41 @@
+{
+  "dataset": "wiki2018",
+  "model": "ilnse_A0",
+  "feature_set": "A0",
+  "num_features": 6,
+  "cache_sizes": [
+    16123,
+    20154,
+    40308,
+    60463,
+    80617,
+    100772
+  ],
+  "hr_curve": [
+    {
+      "cache_size_objects": 16123,
+      "hit_ratio": 0.386263
+    },
+    {
+      "cache_size_objects": 20154,
+      "hit_ratio": 0.40703588888888886
+    },
+    {
+      "cache_size_objects": 40308,
+      "hit_ratio": 0.4917916666666667
+    },
+    {
+      "cache_size_objects": 60463,
+      "hit_ratio": 0.5515423333333334
+    },
+    {
+      "cache_size_objects": 80617,
+      "hit_ratio": 0.5753938888888889
+    },
+    {
+      "cache_size_objects": 100772,
+      "hit_ratio": 0.5924746666666667
+    }
+  ],
+  "avg_hr": 0.5007502407407407
+}

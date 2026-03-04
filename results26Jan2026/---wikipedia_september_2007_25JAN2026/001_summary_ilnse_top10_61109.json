@@ -1,0 +1,22 @@
+{
+  "dataset": "wikipedia_september_2007",
+  "model": "ilnse_top10",
+  "cache_size_objects": 61109,
+  "total_requests": 9000000,
+  "warmup_requests": 1000000,
+  "slot_size": 100000,
+  "hit_ratio": 0.69690875,
+  "cache_hits": 5575270,
+  "cache_requests": 8000000,
+  "num_slots": 90,
+  "warmup_slots": 10,
+  "cache_slots": 80,
+  "pop_top_percent": 0.1,
+  "label_topk_rounding": "floor",
+  "label_tie_break": "none",
+  "timestamp_corrections": {
+    "corrected": 8899480,
+    "total_with_ts": 9000000,
+    "ratio": 0.9888311111111111
+  }
+}

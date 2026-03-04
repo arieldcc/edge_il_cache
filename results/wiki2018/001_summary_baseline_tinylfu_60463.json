@@ -1,0 +1,10 @@
+{
+  "dataset": "wiki2018",
+  "policy": "TINYLFU",
+  "cache_size_objects": 60463,
+  "total_requests_config": 10000000,
+  "warmup_requests_config": 1000000,
+  "cache_hits": 4556562,
+  "cache_requests": 9000000,
+  "hit_ratio": 0.5062846666666667
+}

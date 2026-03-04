@@ -1,0 +1,95 @@
+=== Summary ===
+policy=LRU, cache_size=12221, hit_ratio=0.5877 (4701290/8000000)
+policy=LRU, cache_size=15277, hit_ratio=0.5979 (4782822/8000000)
+policy=LRU, cache_size=30554, hit_ratio=0.6281 (5024636/8000000)
+policy=LRU, cache_size=45831, hit_ratio=0.6468 (5174749/8000000)
+policy=LRU, cache_size=61109, hit_ratio=0.6612 (5289315/8000000)
+policy=LRU, cache_size=76386, hit_ratio=0.6729 (5383299/8000000)
+
+=== Summary ===
+policy=LRU-K, cache_size=12221, hit_ratio=0.6081 (4865143/8000000)
+policy=LRU-K, cache_size=15277, hit_ratio=0.6180 (4943825/8000000)
+policy=LRU-K, cache_size=30554, hit_ratio=0.6495 (5196329/8000000)
+policy=LRU-K, cache_size=45831, hit_ratio=0.6697 (5357635/8000000)
+policy=LRU-K, cache_size=61109, hit_ratio=0.6850 (5479947/8000000)
+policy=LRU-K, cache_size=76386, hit_ratio=0.6973 (5578302/8000000)
+
+=== Summary ===
+policy=LFUDA, cache_size=12221, hit_ratio=0.6126 (4900796/8000000)
+policy=LFUDA, cache_size=15277, hit_ratio=0.6204 (4963239/8000000)
+policy=LFUDA, cache_size=30554, hit_ratio=0.6471 (5176742/8000000)
+policy=LFUDA, cache_size=45831, hit_ratio=0.6651 (5320435/8000000)
+policy=LFUDA, cache_size=61109, hit_ratio=0.6791 (5433102/8000000)
+policy=LFUDA, cache_size=76386, hit_ratio=0.6908 (5526110/8000000)
+
+=== Summary GDBT Fitur A0 ===
+GDBT+LRU, cache_size=12221, hit_ratio=0.6369 (5094979/8000000)
+GDBT+LRU, cache_size=15277, hit_ratio=0.6452 (5161207/8000000)
+GDBT+LRU, cache_size=30554, hit_ratio=0.6703 (5362642/8000000)
+GDBT+LRU, cache_size=45831, hit_ratio=0.6820 (5456389/8000000)
+GDBT+LRU, cache_size=61109, hit_ratio=0.6866 (5493093/8000000)
+GDBT+LRU, cache_size=76386, hit_ratio=0.6876 (5500618/8000000)
+
+=== Summary ILNSE Xu Fitur A0 ===
+model=ILNSE, cache_size=12221, hit_ratio=0.6284 (5026873/8000000)
+model=ILNSE, cache_size=15277, hit_ratio=0.6366 (5092697/8000000)
+model=ILNSE, cache_size=30554, hit_ratio=0.6627 (5301396/8000000)
+model=ILNSE, cache_size=45831, hit_ratio=0.6778 (5422373/8000000)
+model=ILNSE, cache_size=61109, hit_ratio=0.6884 (5507404/8000000)
+model=ILNSE, cache_size=76386, hit_ratio=0.6963 (5570439/8000000)
+
+=== Summary Fitur A2 ===
+GDBT+LRU, cache_size=12221, hit_ratio=0.6374 (5099015/8000000)>GDBTA0
+GDBT+LRU, cache_size=15277, hit_ratio=0.6455 (5163650/8000000)>GDBTA0
+GDBT+LRU, cache_size=30554, hit_ratio=0.6696 (5356764/8000000)<GDBTA0
+GDBT+LRU, cache_size=45831, hit_ratio=0.6799 (5439474/8000000)<GDBTA0
+GDBT+LRU, cache_size=61109, hit_ratio=0.6832 (5465973/8000000)<GDBTA0
+GDBT+LRU, cache_size=76386, hit_ratio=0.6836 (5468789/8000000)<GDBTA0
+
+=== Summary IL Fitur A0 dengan konsep drift JSD file:results/wikipedia_september_2007/004 ===
+cache_size=12221, hit_ratio=0.6216 (4972855/8000000)
+cache_size=15277, hit_ratio=0.6294 (5035129/8000000)
+cache_size=30554, hit_ratio=0.6588 (5270027/8000000)
+cache_size=45831, hit_ratio=0.6837 (5469346/8000000)
+cache_size=61109, hit_ratio=0.7002 (5601725/8000000)
+cache_size=76386, hit_ratio=0.7119 (5694850/8000000)
+
+=== Summary IL Fitur A2 dengan konsep drift JSD file:results/wikipedia_september_2007/015 ===
+cache_size=12221, hit_ratio=0.6360 (5088061/8000000)
+cache_size=15277, hit_ratio=0.6437 (5149913/8000000)
+cache_size=30554, hit_ratio=0.6706 (5364454/8000000)
+cache_size=45831, hit_ratio=0.6888 (5510494/8000000)
+cache_size=61109, hit_ratio=0.7029 (5622828/8000000)
+cache_size=76386, hit_ratio=0.7133 (5706494/8000000)
+
+=== Summary IL Fitur A2 dengan konsep no-drift_detectioon file:results/wikipedia_september_2007/018 ===
+cache_size=12221, hit_ratio=0.6346 (5076722/8000000)
+cache_size=15277, hit_ratio=0.6422 (5137653/8000000)
+cache_size=30554, hit_ratio=0.6711 (5368505/8000000)
+cache_size=45831, hit_ratio=0.6881 (5504821/8000000)
+cache_size=61109, hit_ratio=0.6999 (5599464/8000000)
+cache_size=76386, hit_ratio=0.7085 (5668313/8000000)
+
+=== Summary IL Fitur A2 dengan konsep drift JSD file:results/wikipedia_september_2007/019 ===
+cache_size=12221, hit_ratio=0.6360 (5087838/8000000)
+cache_size=15277, hit_ratio=0.6429 (5143283/8000000)
+cache_size=30554, hit_ratio=0.6705 (5363850/8000000)
+cache_size=45831, hit_ratio=0.6898 (5518452/8000000)
+cache_size=61109, hit_ratio=0.7041 (5632791/8000000)
+cache_size=76386, hit_ratio=0.7141 (5712584/8000000)
+
+=== Summary IL Fitur A2 dengan konsep drift JSD file:results/wikipedia_september_2007/020 ===
+cache_size=12221, hit_ratio=0.6365 (5092103/8000000)
+cache_size=15277, hit_ratio=0.6438 (5150119/8000000)
+cache_size=30554, hit_ratio=0.6700 (5359749/8000000)
+cache_size=45831, hit_ratio=0.6896 (5517008/8000000)
+cache_size=61109, hit_ratio=0.7041 (5632579/8000000)
+cache_size=76386, hit_ratio=0.7151 (5720426/8000000)
+
+=== Summary IL Fitur A2 dengan konsep drift JSD file:results/wikipedia_september_2007/022 ===
+cache_size=12221, hit_ratio=0.6370 (5095694/8000000)
+cache_size=15277, hit_ratio=0.6441 (5153071/8000000)
+cache_size=30554, hit_ratio=0.6705 (5364085/8000000)
+cache_size=45831, hit_ratio=0.6897 (5517792/8000000)
+cache_size=61109, hit_ratio=0.7042 (5633686/8000000)
+cache_size=76386, hit_ratio=0.7149 (5719337/8000000)

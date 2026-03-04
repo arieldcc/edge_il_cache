@@ -1,0 +1,16 @@
+{
+  "dataset": "wikipedia_september_2007",
+  "model": "gdbt_A2_overhead",
+  "feature_set": "A2",
+  "num_features": 10,
+  "cache_sizes": [
+    12221
+  ],
+  "hr_curve": [
+    {
+      "cache_size_objects": 12221,
+      "hit_ratio": 0.637376875
+    }
+  ],
+  "avg_hr": 0.637376875
+}

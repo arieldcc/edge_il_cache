@@ -1,0 +1,48 @@
+{
+  "dataset": "wikipedia_september_2007",
+  "model": "ilnse_A2_guard_full_nb_drift_piecewise_aggressive",
+  "feature_set": "A2",
+  "base_learner": "nb",
+  "drift_control_mode": "piecewise",
+  "drift_norm_power": 0.7,
+  "drift_threshold": 0.5,
+  "drift_alpha_low": 0.02,
+  "drift_alpha_high": 0.3,
+  "drift_use_capacity_scale": true,
+  "num_features": 10,
+  "cache_sizes": [
+    12221,
+    15277,
+    30554,
+    45831,
+    61109,
+    76386
+  ],
+  "hr_curve": [
+    {
+      "cache_size_objects": 12221,
+      "hit_ratio": 0.6353055
+    },
+    {
+      "cache_size_objects": 15277,
+      "hit_ratio": 0.6430885
+    },
+    {
+      "cache_size_objects": 30554,
+      "hit_ratio": 0.671215875
+    },
+    {
+      "cache_size_objects": 45831,
+      "hit_ratio": 0.689805375
+    },
+    {
+      "cache_size_objects": 61109,
+      "hit_ratio": 0.70352875
+    },
+    {
+      "cache_size_objects": 76386,
+      "hit_ratio": 0.713043125
+    }
+  ],
+  "avg_hr": 0.6759978541666666
+}

@@ -1,0 +1,14 @@
+| Method | Cache | avg_M | avg_A | admit_rate | miss_rate_avg |
+| --- | --- | --- | --- | --- | --- |
+| ilnse_A2 | 16123 | 1139.46 | 1139.46 | 0.0227143 | 0.533427 |
+| ilnse_A2 | 20154 | 1088.57 | 1088.57 | 0.0221791 | 0.519368 |
+| ilnse_A2 | 40308 | 2533.94 | 2533.94 | 0.0559797 | 0.473791 |
+| ilnse_A2 | 60463 | 2451.86 | 2451.86 | 0.0578637 | 0.440711 |
+| ilnse_A2 | 80617 | 24186 | 24186 | 0.546163 | NA |
+| ilnse_A2 | 100772 | 10078 | 10078 | 0.253553 | NA |
+| ilnse_xu | 16123 | NA | NA | NA | NA |
+| ilnse_xu | 20154 | NA | NA | NA | NA |
+| ilnse_xu | 40308 | NA | NA | NA | NA |
+| ilnse_xu | 60463 | NA | NA | NA | NA |
+| ilnse_xu | 80617 | NA | NA | NA | NA |
+| ilnse_xu | 100772 | NA | NA | NA | NA |

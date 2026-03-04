@@ -1,0 +1,23 @@
+{
+  "dataset": "wikipedia_september_2007",
+  "model": "ilnse_A2_guard_full_nb_overhead",
+  "feature_set": "A2",
+  "base_learner": "nb",
+  "drift_control_mode": "scaled",
+  "drift_norm_power": 1.0,
+  "drift_threshold": 0.6,
+  "drift_alpha_low": 0.04,
+  "drift_alpha_high": 0.18,
+  "drift_use_capacity_scale": true,
+  "num_features": 10,
+  "cache_sizes": [
+    12221
+  ],
+  "hr_curve": [
+    {
+      "cache_size_objects": 12221,
+      "hit_ratio": 0.636714875
+    }
+  ],
+  "avg_hr": 0.636714875
+}
