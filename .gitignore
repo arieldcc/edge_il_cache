@@ -27,3 +27,6 @@ results_nse/
 
 # Assets not tracked in remote
 gambar/
+
+# Analysis notebooks/matrices folder not tracked in remote
+src/matriks/
