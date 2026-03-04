@@ -96,8 +96,28 @@ python src/experiments/run_gdbt_cache_overhead.py \
 
 ## 6. Evaluation and Visualization
 
-Evaluation and visualization notebooks are available in:
+Evaluation and visualization notebooks are available in `notebooks/`.
 
-- `notebooks/`
+The following panels are aligned with the journal draft:
 
-You can open them with Jupyter Lab/Notebook after activating the Conda environment.
+1. Wiki2018 panel  
+   `results/figures/cont1_panel_wiki2018.png`
+
+   ![Wiki2018 Panel](results/figures/cont1_panel_wiki2018.png)
+
+2. Wikipedia September 2007 panel  
+   `results/figures/cont1_panel_wikipedia_september_2007.png`
+
+   ![Wikipedia September 2007 Panel](results/figures/cont1_panel_wikipedia_september_2007.png)
+
+3. Guardrails component ablation: hit-ratio gap between the full guardrails configuration and ablated variants across cache sizes  
+   `results/figures/cont2_ablation_delta_panel.png`
+
+   ![Guardrails Component Ablation Delta Panel](results/figures/cont2_ablation_delta_panel.png)
+
+4. Overhead panel  
+   `results/figures/overhead_cdf_panel.png`
+
+   ![Overhead CDF Panel](results/figures/overhead_cdf_panel.png)
+
+You can open notebooks with Jupyter Lab/Notebook after activating the Conda environment.
