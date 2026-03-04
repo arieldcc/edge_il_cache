@@ -19,3 +19,8 @@ data/row/
 
 # Root-level text notes (do not upload)
 /*.txt
+
+# Archive/result folders not tracked in remote
+results26Jan2026/
+results27Jan2026/
+results_nse/
