@@ -54,7 +54,7 @@ This script writes:
 ### 3.1 No Guard
 
 ```bash
-python src/experiments/run_il_cache_opt022_guard_compare_nb_svm_dt.py \
+python src/experiments/run_il_cache_opt022_guard_or_noguard.py \
   --model guard_no_guard \
   --feature-sets A2 \
   --base-learners nb \
@@ -64,7 +64,7 @@ python src/experiments/run_il_cache_opt022_guard_compare_nb_svm_dt.py \
 ### 3.2 Guard
 
 ```bash
-python src/experiments/run_il_cache_opt022_guard_compare_nb_svm_dt.py \
+python src/experiments/run_il_cache_opt022_guard_or_noguard.py \
   --model guard_full \
   --feature-sets A2 \
   --base-learners nb \
