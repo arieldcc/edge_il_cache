@@ -138,6 +138,9 @@ def _compute_admission_budget(
     alpha: float,
     pressure_mult: float = 1.0,
 ) -> int:
+    # Eq. (6) operational counterpart:
+    # - Budget M_t is realized via bounded alpha * pressure in this implementation.
+    # - This is a controller-equivalent heuristic, not literal additive update.
     if miss_requests <= 0:
         return 0
     return int(math.ceil(capacity_objects * alpha * pressure_mult))
@@ -651,6 +654,11 @@ def run_single_capacity(
         nonlocal applied_admit_set
         nonlocal applied_admit_source_slot
         nonlocal total_admit_applied
+        # Eq. (2) mapping:
+        # - Paper A_t          -> pending_admit_set (decided at end of slot t)
+        # - Paper S_{t+1}      -> cache state after this boundary insertion
+        # - Paper "apply at t+1" -> this function, called before serving next slot
+        # In-slot recency updates still follow LRU via cache.access(...).
         if not pending_admit_set:
             applied_admit_set = set()
             applied_admit_source_slot = None
@@ -768,7 +776,12 @@ def run_single_capacity(
         warmup_slots = warmup_requests // slot_size
         is_cache_slot = slot_num > warmup_slots
 
-        # admission precision (applied set berasal dari slot sebelumnya)
+        # Eq. (3) mapping:
+        # - Paper P_t          -> pos_ids (objects with y=1 in current D_t)
+        # - Paper A_{t-l}^{applied} -> apply_set from applied_history
+        # - Paper p_t^{(l)}    -> precision_by_lag[lag]
+        # - Paper p_t^{eff}    -> precision_eff = max_l precision_by_lag[l]
+        # This code uses the implementation-aligned lagged precision proxy.
         pos_ids: set[str] = set()
         admit_true_applied = None
         admit_precision = None
@@ -876,6 +889,11 @@ def run_single_capacity(
                 alpha_base = (DRIFT_ALPHA_HIGH if drift_norm_p >= DRIFT_THRESHOLD else DRIFT_ALPHA_LOW) * scale
             else:
                 alpha_base = admission_capacity_alpha * (1.0 + DRIFT_GAIN * drift_norm_p) * scale
+            # Eq. (6) base-intensity mapping:
+            # - Paper chi_t / zeta_t -> capacity_scale when DRIFT_USE_CAPACITY_SCALE is on
+            # - Paper alpha_t^{base} -> alpha_base after scaling and clipping
+            # Drift terms remain in code, but with current config DRIFT_GAIN=0 they do
+            # not change the budget-driving formula beyond the bounded alpha range.
             if alpha_base < DRIFT_ALPHA_MIN:
                 alpha_base = DRIFT_ALPHA_MIN
             elif alpha_base > DRIFT_ALPHA_MAX:
@@ -891,6 +909,12 @@ def run_single_capacity(
                     precision_adjust = 1.0 + ADMISSION_PRECISION_SENSITIVITY * precision_delta
             alpha_candidate = alpha_base * precision_adjust
             alpha_floor = alpha_base * DRIFT_ALPHA_FLOOR_MULT
+            # Eq. (6) final-intensity mapping:
+            # - Paper p_t^{eff}      -> guard_precision / precision_eff
+            # - Paper p_tar          -> ADMISSION_PRECISION_TARGET
+            # - Paper xi_p           -> ADMISSION_PRECISION_SENSITIVITY
+            # - Paper nu             -> DRIFT_ALPHA_FLOOR_MULT
+            # - Paper alpha_t        -> alpha_for_slot
             alpha_for_slot = alpha_candidate if alpha_candidate >= alpha_floor else alpha_floor
             if alpha_for_slot < DRIFT_ALPHA_MIN:
                 alpha_for_slot = DRIFT_ALPHA_MIN
@@ -910,6 +934,11 @@ def run_single_capacity(
                 alpha_max_seen = alpha_for_slot
         candidate_scores: Dict[str, float] = {}
         candidate_ids: List[str] = []
+        # Eq. (1) mapping:
+        # - Paper C_t          -> unique miss-object pool built in candidate_ids
+        # - Paper x_{t,j}(o)   -> per-miss feature vector in slot_miss_features
+        # - Paper f_{t-1}(.)   -> il_model.score_batch(...) using pre-update model
+        # - Paper s_t(o)       -> candidate_scores[obj_id] after max-per-object merge
         if slot_miss_features:
             X_miss = np.asarray(slot_miss_features, dtype=float)
             miss_scores = il_model.score_batch(X_miss)
@@ -929,6 +958,10 @@ def run_single_capacity(
             scores = np.asarray(candidate_score_list, dtype=float)
             p50 = float(np.quantile(scores, 0.5))
             pq = float(np.quantile(scores, SCORE_SPREAD_Q))
+            # Eq. (7) quality mapping:
+            # - Paper q_t        -> score_spread = Q_{0.90} - Q_{0.50}
+            # - Paper bar{q}_t   -> score_spread_ema
+            # - Paper u_t        -> quality_mult after normalization and clipping
             score_spread = pq - p50
             if score_spread_ema is None:
                 score_spread_ema = score_spread
@@ -988,12 +1021,21 @@ def run_single_capacity(
                 score_acc_count += 1
 
         if is_cache_slot:
+            # Eq. (7) pressure mapping:
+            # - Paper m_t        -> miss_rate = miss_requests / slot_cache_requests
+            # - Paper gamma_m    -> PRESSURE_MISS_GAMMA
+            # - Paper g_t        -> pressure_mult = (1 + gamma_m * m_t) * u_t
             pressure_mult = (1.0 + PRESSURE_MISS_GAMMA * miss_rate) * quality_mult
             pressure_mult_sum += pressure_mult
             pressure_mult_count += 1
             if fill_phase:
                 fill_phase_slots += 1
                 fill_min_budget_sum += fill_min_budget
+        # Eq. (4) budget mapping:
+        # - Paper C            -> capacity_objects
+        # - Paper alpha_t      -> alpha_for_slot
+        # - Paper g_t          -> pressure_mult
+        # - Paper M_t^{raw}    -> _compute_admission_budget(...)
         admit_budget = _compute_admission_budget(
             slot_cache_misses,
             capacity_objects,
@@ -1006,6 +1048,12 @@ def run_single_capacity(
             admit_budget = 0
         elif admit_budget > miss_candidates:
             admit_budget = miss_candidates
+        # Eq. (4) final-cap mapping:
+        # - Paper delta_t      -> fill_phase
+        # - Paper r_fill       -> FILL_RATE
+        # - Paper theta_fill   -> FILL_RATIO
+        # - Paper U_t          -> score_gate_k = ceil(SCORE_GATE_TOP_PERCENT * |C_t|)
+        # - Final Paper M_t    -> admit_budget after fill-floor and top-percent cap
         score_gate_k = 0
         score_gate_applied = False
         if miss_candidates > 0:
@@ -1016,6 +1064,10 @@ def run_single_capacity(
                 score_gate_applied = True
                 score_gate_applied_slots += 1
         total_admit_budget += admit_budget
+        # Eq. (1) selector mapping:
+        # - Paper Top_{M_t}(.) -> _select_top_m(candidate_ids, candidate_score_list, admit_budget)
+        # - Paper A_t          -> next_admit_set (stored as pending_admit_set)
+        # - No explicit tau_t  -> guard_full uses implicit gating via admit_budget and score_gate_k
         next_admit_set = _select_top_m(candidate_ids, candidate_score_list, admit_budget)
         admit_selected = len(next_admit_set)
         slot_admit_requests = admit_selected
@@ -1074,6 +1126,10 @@ def run_single_capacity(
             "miss_requests": miss_requests,
             "miss_rate": miss_rate,
             "miss_candidates": miss_candidates,
+            # rho_t = |A_t| / max(1, |C_t|) from Section III.
+            "admission_rate": (
+                float(admit_selected / miss_candidates) if miss_candidates > 0 else 0.0
+            ),
             "fill_phase": fill_phase,
             "fill_min_budget": fill_min_budget,
             "pressure_mult": pressure_mult,
@@ -1323,6 +1379,12 @@ def run_single_capacity(
         "reject_requests_total": total_reject_requests,
         "admit_selected_total": total_admit_selected,
         "admit_applied_total": total_admit_applied,
+        # rho_bar over trace (aggregate form of rho_t).
+        "admission_rate_total": (
+            float(total_admit_selected / total_miss_candidates)
+            if total_miss_candidates > 0
+            else None
+        ),
         "admit_true_popular_total": total_admit_true_popular,
         "hits_from_admitted_total": total_hits_from_admitted,
         "pollution_total": total_pollution_total,
@@ -1342,6 +1404,11 @@ def run_single_capacity(
             if total_pollution_total > 0
             else None
         ),
+        # Eq. (5) evaluation mapping:
+        # - Paper rho_t / bar{rho} -> admission_rate_total over trace
+        # - Paper Poll_t / bar{Poll} -> pollution_rate_total over trace
+        # - Paper HR               -> stats.hit_ratio
+        # This block reports the evaluation terms; it does not drive online control.
         "miss_rate_avg": (
             float(miss_rate_sum / total_cache_slots) if total_cache_slots > 0 else None
         ),
@@ -1494,6 +1561,16 @@ def run_experiment(
     dataset_name = ds_cfg["name"]     # misal "WIKI2018"
     results_root = "results"
 
+    drift_control_mode = (DRIFT_CONTROL_MODE or "scaled").lower()
+    piecewise_active = drift_control_mode == "piecewise"
+    scaled_active = drift_control_mode == "scaled" and DRIFT_GAIN != 0.0
+    drift_signal_active = piecewise_active or scaled_active
+    quality_active = (
+        SCORE_QUALITY_MIN != 1.0
+        or SCORE_QUALITY_MAX != 1.0
+        or SCORE_QUALITY_MIN_BOOST != 0.0
+    )
+
     print(f"=== IL-based Edge Cache Experiment ({dataset_name} trace) ===")
     print(f"Trace path        : {trace_path}")
     print(f"Total requests    : {total_requests}")
@@ -1503,34 +1580,41 @@ def run_experiment(
     print(f"Feature set       : {feature_set}")
     print(f"Num features      : {_get_feature_dim(IL_NUM_GAPS, feature_set)}")
     print(f"Base learner      : {base_learner}")
-    print(f"Drift control     : {DRIFT_CONTROL_MODE}")
-    print(f"Drift norm power  : {DRIFT_NORM_POWER}")
-    print(f"Drift threshold   : {DRIFT_THRESHOLD}")
-    print(f"Drift alpha low   : {DRIFT_ALPHA_LOW}")
-    print(f"Drift alpha high  : {DRIFT_ALPHA_HIGH}")
-    print(f"Use cap scale     : {DRIFT_USE_CAPACITY_SCALE}")
+    if drift_signal_active:
+        print(f"Drift control     : {DRIFT_CONTROL_MODE}")
+    if drift_signal_active:
+        print(f"Drift norm power  : {DRIFT_NORM_POWER}")
+    if scaled_active:
+        print(f"Drift gain        : {DRIFT_GAIN}")
+    if piecewise_active:
+        print(f"Drift threshold   : {DRIFT_THRESHOLD}")
+        print(f"Drift alpha low   : {DRIFT_ALPHA_LOW}")
+        print(f"Drift alpha high  : {DRIFT_ALPHA_HIGH}")
+    # print(f"Use cap scale     : {DRIFT_USE_CAPACITY_SCALE}")
     print(f"IL top_percent    : {IL_POP_TOP_PERCENT}")
-    print(f"Label rounding    : {label_topk_rounding}")
-    print(f"Label tie-break   : {label_tie_break}")
+    # print(f"Label rounding    : {label_topk_rounding}")
+    # print(f"Label tie-break   : {label_tie_break}")
     print(f"IL sigmoid (a, b) : ({IL_SIGMOID_A}, {IL_SIGMOID_B})")
     print(f"Max learners      : {IL_MAX_CLASSIFIERS}")
-    print("Admission policy  : top_capacity_rate")
+    # print("Admission policy  : top_capacity_rate")
     print(f"Admission alpha   : {ADMISSION_CAPACITY_ALPHA}")
-    print(f"Fill ratio/rate   : {FILL_RATIO} / {FILL_RATE}")
-    print(f"Pressure gamma   : {PRESSURE_MISS_GAMMA}")
-    print(
-        "Quality spread   : q="
-        f"{SCORE_SPREAD_Q}, ema={SCORE_SPREAD_EMA_ALPHA}, "
-        f"min={SCORE_QUALITY_MIN}, max={SCORE_QUALITY_MAX}, "
-        f"min_boost={SCORE_QUALITY_MIN_BOOST}"
-    )
-    print(f"Drift alpha range : {DRIFT_ALPHA_MIN}–{DRIFT_ALPHA_MAX}")
-    print(f"Drift sensitivity: {DRIFT_SENSITIVITY}")
-    print(f"Drift EMA alpha  : {DRIFT_EMA_ALPHA}")
-    print(
-        f"Drift weights    : jsd={DRIFT_WEIGHT_JSD}, overlap={DRIFT_WEIGHT_OVERLAP}"
-    )
-    print(f"Precision target  : {ADMISSION_PRECISION_TARGET}")
+    # print(f"Fill ratio/rate   : {FILL_RATIO} / {FILL_RATE}")
+    # print(f"Pressure gamma   : {PRESSURE_MISS_GAMMA}")
+    if quality_active:
+        print(
+            "Quality spread   : q="
+            f"{SCORE_SPREAD_Q}, ema={SCORE_SPREAD_EMA_ALPHA}, "
+            f"min={SCORE_QUALITY_MIN}, max={SCORE_QUALITY_MAX}, "
+            f"min_boost={SCORE_QUALITY_MIN_BOOST}"
+        )
+    # print(f"Drift alpha range : {DRIFT_ALPHA_MIN}–{DRIFT_ALPHA_MAX}")
+    if drift_signal_active:
+        print(f"Drift EMA alpha  : {DRIFT_EMA_ALPHA}")
+        print(
+            f"Drift weights    : jsd={DRIFT_WEIGHT_JSD}, overlap={DRIFT_WEIGHT_OVERLAP}"
+        )
+    if ADMISSION_PRECISION_SENSITIVITY > 0.0:
+        print(f"Precision target  : {ADMISSION_PRECISION_TARGET}")
     print(f"Cache capacities  : {list(cache_size_percentages)}")
     print()
 
@@ -1664,4 +1748,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-# 1185
+# 1697
